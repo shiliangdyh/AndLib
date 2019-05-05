@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.alexvasilkov.gestures.views.GestureFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnGestureImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GestureImageView" />
+
+        <Button
+            android:id="@+id/btnImageViewAnim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GestureImageViewAnim" />
+
+        <Button
+            android:id="@+id/btnRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView transitions" />
+    </LinearLayout>
+
+</com.alexvasilkov.gestures.views.GestureFrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义颜色字体大小-->
+    <style name="SLSelectFileStyle" parent="BaseTheme">
+        <!--toolbar 标题颜色-->
+        <item name="toolbar_title_color">@android:color/white</item>
+        <!--toolbar 背景颜色-->
+        <item name="toolbar_bg_color">#1890FF</item>
+        <!--toolbar 标题字体大小-->
+        <item name="toolbar_title_text_size">17sp</item>
+        <!--toolbar 菜单字体大小-->
+        <item name="menu_text_size">14sp</item>
+        <!--toolbar 菜单可点击时字体颜色-->
+        <item name="menu_text_color_enable">@android:color/white</item>
+        <!--toolbar 菜单不可点击时字体颜色-->
+        <item name="menu_text_color_unable">#44FFFFFF</item>
+        <!--toolbar副标题颜色-->
+        <item name="toolbar_subtitle_color">#88FFFFFF</item>
+        <!--toolbar 副标题字体大小-->
+        <item name="toolbar_subtitle_text_size">10sp</item>
+    </style>
+
+    <style name="NoSpaceActionbarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:actionMenuTextColor">@color/menu_color_select_file</item>
+        <item name="android:textColor">@color/menu_color_select_file</item>
+        <item name="android:textSize">?attr/menu_text_size</item>
+    </style>
+
+    <style name="ToolbarTitleTextAppearance">
+        <item name="android:actionMenuTextColor">@color/menu_color_select_file</item>
+        <item name="android:textColor">?attr/toolbar_title_color</item>
+        <item name="android:textSize">?attr/toolbar_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ToolbarSubtitleTextAppearance">
+        <item name="android:textColor">?attr/toolbar_subtitle_color</item>
+        <item name="android:textSize">?attr/toolbar_subtitle_text_size</item>
+    </style>
+
+</resources>

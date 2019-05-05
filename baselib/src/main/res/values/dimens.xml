@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_dialog_margin">16dp</dimen>
+    <dimen name="toast_margin">16dp</dimen>
+    <dimen name="toast_margin_bottom">50dp</dimen>
+    <dimen name="toast_padding">10dp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+</resources>

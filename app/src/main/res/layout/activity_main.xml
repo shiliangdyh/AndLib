@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnGlide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Glide加载图片显示进度" />
+
+    <Button
+        android:id="@+id/btnProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件进度" />
+
+    <Button
+        android:id="@+id/btnSelectFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文件选择" />
+
+    <Button
+        android:id="@+id/btnAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="屏幕适配" />
+
+    <Button
+        android:id="@+id/btnZxing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="二维码" />
+
+    <Button
+        android:id="@+id/btnGestureViews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GestureViews" />
+
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="视频" />
+
+    <Button
+        android:id="@+id/btnImageVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片和视频" />
+
+    <Button
+        android:id="@+id/btnPictures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pictures" />
+
+    <Button
+        android:id="@+id/btnXRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="xrecyclerview" />
+
+    <Button
+        android:id="@+id/btnFlexboxLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FlexboxLayoutManager" />
+</LinearLayout>

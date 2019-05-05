@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="toolbar_bg_color" format="reference|color" />
+    <attr name="toolbar_title_color" format="reference|color" />
+    <attr name="toolbar_subtitle_color" format="reference|color" />
+    <attr name="toolbar_title_text_size" format="reference|dimension" />
+    <attr name="toolbar_subtitle_text_size" format="reference|dimension" />
+    <attr name="menu_text_size" format="reference|dimension" />
+    <attr name="menu_text_color_enable" format="reference|color" />
+    <attr name="menu_text_color_unable" format="reference|color" />
+</resources>

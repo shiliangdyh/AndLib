@@ -1,0 +1,31 @@
+<resources>
+
+    <style name="BaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/Customer</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Customer" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <!-- 进入一个新的Activity的时候，A->B B进入动画 -->
+        <item name="android:activityOpenEnterAnimation">@anim/anim_enter</item>
+        <!-- 进入一个新的Activity的时候，A->B A退出动画 -->
+        <item name="android:activityOpenExitAnimation">@anim/anim_exit</item>
+        <!-- 退出一个Activity的时候，B返回到A A进入动画 -->
+        <item name="android:activityCloseEnterAnimation">@anim/back_enter</item>
+        <!-- 退出一个Activity的时候，B返回到A B退出动画 -->
+        <item name="android:activityCloseExitAnimation">@anim/back_exit</item>
+    </style>
+
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialog.AnimationStyle</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="BottomDialog.AnimationStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+</resources>

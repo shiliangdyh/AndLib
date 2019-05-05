@@ -1,0 +1,1 @@
+include ':app', ':baselib', ':zxinglib','selectfilelib','zxinglib'/*,'jiaozivideoplayer'*/,'giraffecompressor','matisse','xrecyclerview'

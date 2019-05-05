@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="paintings_authors">
+        <item>Vincent van Gogh</item>
+        <item>Vincent van Gogh</item>
+        <item>Vincent van Gogh</item>
+        <item>Vincent van Gogh</item>
+        <item>Vincent van Gogh</item>
+        <item>Vincent van Gogh</item>
+    </string-array>
+
+    <string-array name="paintings_titles">
+        <item>Almond Blossom</item>
+        <item>Peach Tree in Bloom</item>
+        <item>Terrace in the Luxembourg Garden</item>
+        <item>Entrance to the Public Garden in Arles</item>
+        <item>Peasant Woman Binding Sheaves</item>
+        <item>Peasant Woman Binding Sheaves</item>
+    </string-array>
+
+    <array name="paintings_images">
+        <item>@drawable/animtor_001</item>
+        <item>@drawable/animtor_002</item>
+        <item>@drawable/animtor_003</item>
+        <item>@drawable/animtor_004</item>
+        <item>@drawable/animtor_005</item>
+        <item>@drawable/animtor_006</item>
+    </array>
+
+    <array name="paintings_thumbs">
+        <item>@drawable/animtor_001</item>
+        <item>@drawable/animtor_002</item>
+        <item>@drawable/animtor_003</item>
+        <item>@drawable/animtor_004</item>
+        <item>@drawable/animtor_005</item>
+        <item>@drawable/animtor_006</item>
+    </array>
+
+    <array name="paintings_links">
+        <item>https://www.wikiart.org/en/vincent-van-gogh/branches-with-almond-blossom-1890</item>
+        <item>https://www.wikiart.org/en/vincent-van-gogh/peach-tree-in-bloom-in-memory-of-mauve-1888</item>
+        <item>https://www.wikiart.org/en/vincent-van-gogh/terrace-in-the-luxembourg-garden-1886</item>
+        <item>https://www.wikiart.org/en/vincent-van-gogh/entrance-to-the-public-garden-in-arles-1888</item>
+        <item>https://www.wikiart.org/en/vincent-van-gogh/peasant-woman-binding-sheaves-after-millet-1889</item>
+        <item>https://www.wikiart.org/en/vincent-van-gogh/peasant-woman-binding-sheaves-after-millet-1889</item>
+    </array>
+
+</resources>
