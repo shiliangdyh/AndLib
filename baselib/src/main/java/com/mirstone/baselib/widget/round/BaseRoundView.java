@@ -17,6 +17,7 @@ import android.view.View;
 
 import com.mirstone.baselib.R;
 
+
 /**
  * @package: com.mirstone.baselib.widget.round
  * @fileName: BaseRoundView
@@ -28,6 +29,7 @@ public class BaseRoundView {
     private View view;
     private float[] radio = new float[8];   // top-left, top-right, bottom-right, bottom-left
     private Path clipPath;                 // 剪裁区域路径
+    private Path clipReversalPath;        //需要裁剪的反区域
     private Paint paint;                   // 画笔
     private boolean roundAsCircle;           // 圆形
     private int strokeColor;               // 描边颜色
@@ -58,6 +60,7 @@ public class BaseRoundView {
         radio[6] = roundCornerBottomLeft;
         radio[7] = roundCornerBottomLeft;
         clipPath = new Path();
+        clipReversalPath = new Path();
         areaRegion = new Region();
         paint = new Paint();
         paint.setColor(Color.WHITE);
@@ -83,9 +86,12 @@ public class BaseRoundView {
         } else {
             clipPath.addRoundRect(areas, radio, Path.Direction.CW);
         }
+
+        clipReversalPath.addRect(areas,Path.Direction.CW );
+        clipReversalPath.op(clipPath, Path.Op.DIFFERENCE);
         Region clip = new Region((int) areas.left, (int) areas.top,
                 (int) areas.right, (int) areas.bottom);
-        areaRegion.setPath(clipPath, clip);
+        areaRegion.setPath(clipReversalPath, clip);
     }
 
     public void draw(Canvas canvas) {
@@ -101,10 +107,11 @@ public class BaseRoundView {
             paint.setStyle(Paint.Style.STROKE);
             canvas.drawPath(clipPath, paint);
         }
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+        //Android9.0 DST_IN 无效问题
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
         paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.FILL);
-        canvas.drawPath(clipPath, paint);
+        canvas.drawPath(clipReversalPath, paint);
         canvas.restore();
     }
 
