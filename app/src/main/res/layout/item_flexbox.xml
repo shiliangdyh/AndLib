@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mirstone.baselib.widget.round.RoundTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#999"
     android:layout_height="wrap_content"
     android:textColor="@color/lfile_white"
+    app:round_corner="10dp"
     android:layout_margin="10dp">
 
-</TextView>
+</com.mirstone.baselib.widget.round.RoundTextView>

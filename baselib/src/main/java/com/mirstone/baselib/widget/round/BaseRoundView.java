@@ -10,6 +10,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.graphics.Region;
+import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -87,11 +88,16 @@ public class BaseRoundView {
             clipPath.addRoundRect(areas, radio, Path.Direction.CW);
         }
 
-        clipReversalPath.addRect(areas,Path.Direction.CW );
-        clipReversalPath.op(clipPath, Path.Op.DIFFERENCE);
+
         Region clip = new Region((int) areas.left, (int) areas.top,
                 (int) areas.right, (int) areas.bottom);
-        areaRegion.setPath(clipReversalPath, clip);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            clipReversalPath.addRect(areas,Path.Direction.CW );
+            clipReversalPath.op(clipPath, Path.Op.DIFFERENCE);
+            areaRegion.setPath(clipReversalPath, clip);
+        }else {
+            areaRegion.setPath(clipPath, clip);
+        }
     }
 
     public void draw(Canvas canvas) {
@@ -108,10 +114,15 @@ public class BaseRoundView {
             canvas.drawPath(clipPath, paint);
         }
         //Android9.0 DST_IN 无效问题
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
         paint.setColor(Color.WHITE);
         paint.setStyle(Paint.Style.FILL);
-        canvas.drawPath(clipReversalPath, paint);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
+            canvas.drawPath(clipReversalPath, paint);
+        }else {
+            paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+            canvas.drawPath(clipPath, paint);
+        }
         canvas.restore();
     }
 
