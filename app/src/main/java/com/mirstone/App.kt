@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.github.tcking.giraffecompressor.GiraffeCompressor
 import com.mirstone.baselib.screenadapter.Density
+import com.mirstone.baselib.util.LogUtil
 
 
 /**
@@ -23,6 +24,9 @@ class App : Application() {
         Density.setDensity(this, 375f);
         GiraffeCompressor.DEBUG = true
         GiraffeCompressor.init(this)
+        LogUtil.DEBUG = true
+        LogUtil.hasWriteFilePermission = true
+        LogUtil.mContext = this
     }
 
     override fun attachBaseContext(base: Context?) {

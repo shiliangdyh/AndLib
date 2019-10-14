@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import com.mirstone.baselib.base.BaseSwipeBackActivity
+import com.mirstone.baselib.util.LogUtil
 import com.mirstone.module.fileprogress.FileProgressAct
 import com.mirstone.module.flexbox.FlexboxLayoutActivity
 import com.mirstone.module.glide.GlideActivity
@@ -24,6 +25,7 @@ class MainActivity : BaseSwipeBackActivity() {
         setContentView(R.layout.activity_main)
 
         init();
+
     }
 
     private fun init() {

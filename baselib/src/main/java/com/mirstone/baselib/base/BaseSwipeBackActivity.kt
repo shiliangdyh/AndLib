@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import com.mirstone.baselib.util.InputUtil
+import com.mirstone.baselib.util.LogUtil
 import com.mirstone.baselib.util.StatusBarUtil
 import me.imid.swipebacklayout.lib.SwipeBackLayout
 import me.imid.swipebacklayout.lib.app.SwipeBackActivity
@@ -34,6 +35,7 @@ open class BaseSwipeBackActivity : SwipeBackActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initSwipeConfig()
+        LogUtil.d("BaseActivity", javaClass.simpleName)
     }
 
     override fun setContentView(layoutResID: Int) {
